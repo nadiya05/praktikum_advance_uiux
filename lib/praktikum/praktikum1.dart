@@ -1,7 +1,31 @@
 import 'package:flutter/material.dart';
 
-class Praktikum1Screen extends StatelessWidget {
-  const Praktikum1Screen({super.key});
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Material 3 Explorer',
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.indigo,
+          brightness: Brightness.light,
+        ),
+      ),
+      home: const MaterialExplorerPage(),
+    );
+  }
+}
+
+class MaterialExplorerPage extends StatelessWidget {
+  const MaterialExplorerPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +34,7 @@ class Praktikum1Screen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Praktikum 1: Material 3 Explorer'),
+        title: const Text('Material 3 Explorer'),
       ),
       body: ListView(
         padding: const EdgeInsets.all(20),
